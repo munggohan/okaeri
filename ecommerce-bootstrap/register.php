@@ -66,20 +66,19 @@
             <div class="container bg-light">
 <!--*******************FORM REGISTER*************************-->
                 <h4 class="text-center">Register to OKAERI!</h4>
-                <form action="" method="post">
+                <form action="regFunction.php" method="post">
                     <label id="l_fname" class="l_fname" for="fname"></label>
-                    <input id = "i_fname" class="form-control mr-sm-2 my-2 i_fname" type="text" placeholder="First Name">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Middle Name">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Last Name">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Age">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Contact Number">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Address">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Email Adress">
+                    <input id = "i_fname" class="form-control mr-sm-2 my-2 i_fname" type="text" placeholder="First Name" name="fname">
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Middle Name" name="mname">
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Last Name" name="lname">
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Age" name="age">
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Contact Number" name="contact">
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Address" name="address">
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Email Adress" name="email">
                     <input class="form-control mr-sm-2 my-2" type="text" placeholder="Verify Email Adress">
-                    <input class="form-control mr-sm-2 my-2" type="password" placeholder="Password">
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Username" name="username">
+                    <input class="form-control mr-sm-2 my-2" type="password" placeholder="Password" name="password">
                     <input class="form-control mr-sm-2 my-2" type="password" placeholder="Verify Password">
-                    
-                    
                     <button onClick="validation()" class="btn btn-outline-warning w-100 my-2 my-sm-0 text-dark" type="submit">Sign up!</button>
                 </form>
             </div>

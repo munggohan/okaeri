@@ -54,6 +54,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">Orders</a>
                             <a class="dropdown-item" href="#" onClick="logpop()">Log-in</a>
+                            <a class="dropdown-item" href="register.php">Sign-up</a>
                         </div>
                     </li>
                 </ul>

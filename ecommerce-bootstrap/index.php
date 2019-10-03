@@ -13,13 +13,14 @@
 <body>
     <?php
         echo $userID;
+        
     ?>
     <!--POPUP LOGIN-->
     <div id="whole_container" class="popup">
         <div class="container inside text-center">
         <form action="login.php" method="post"> 
             <div class="close" onClick="logpop()">
-                x
+                x toni
             </div>
            <h4 class="">Log In</h4>
            <p class="note d-block m-auto"><?php echo "Put username incorrect or correct"?></p>

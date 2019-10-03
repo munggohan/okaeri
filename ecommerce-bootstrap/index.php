@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php
-        echo $userID;
+        // echo $userID;
     ?>
     <!--POPUP LOGIN-->
     <div id="whole_container" class="popup">
@@ -53,13 +53,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">Orders</a>
-                            <?php
-                            if($_SESSION['userID']!=''){
-                                echo '<a class="dropdown-item" href="#">Sign-out</a>';
-                            }else{
-                                echo '<a class="dropdown-item" href="#" onClick="logpop()">Log-in</a>';
-                            }
-                            ?>
+                            <a class="dropdown-item" href="#" onClick="logpop()">Log-in</a>
                         </div>
                     </li>
                 </ul>

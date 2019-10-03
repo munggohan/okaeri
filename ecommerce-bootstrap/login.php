@@ -13,8 +13,9 @@
     $row = mysqli_fetch_array($result);
     if($row['userName']==$username && $row['userPassword']==$password){
         $_SESSION['userID'] = $row['userID'];
-        $_SESSION
-        echo $row['userID'];
+        $_SESSION['userName'] = $row['userName'];
+        $_SESSION['userPassword'] = $row['userPassword'];
+        echo $row['userID']; 
         echo session_id();
         // header("refresh:5;url=index.php");
         header("location:userIndex.php");

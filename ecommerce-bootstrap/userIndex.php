@@ -1,6 +1,8 @@
 <?php
     session_start();
     $userID = $_SESSION['userID'];
+    $userName = $_SESSION['userName'];
+    $userPassword = $_SESSION['userPassword'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +17,7 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
+    <!-- <?php $userName ?> -->
     <!--POPUP LOGIN-->
     <div id="whole_container" class="popup">
         <div class="container inside text-center">
@@ -53,8 +56,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Welcome! <?php echo $userName ?></a>
                             <a class="dropdown-item" href="#">Orders</a>
-                                <a class="dropdown-item" href="#">Sign-out</a>
+                            <a class="dropdown-item" href="#">Sign-out</a>
                         </div>
                     </li>
                 </ul>

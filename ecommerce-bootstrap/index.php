@@ -19,7 +19,7 @@
         <div class="container inside text-center">
         <form action="login.php" method="post"> 
             <div class="close" onClick="logpop()">
-                x toni
+                x
             </div>
            <h4 class="">Log In</h4>
            <p class="note d-block m-auto"><?php echo "Put username incorrect or correct"?></p>

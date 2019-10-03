@@ -59,3 +59,12 @@ div.container.bg-light{
     left: 30%;
     padding: 2%;
 }
+.regform input:focus{
+    outline: none;
+}
+.regform input:required:valid{
+    border-color: palegreen !important;
+}
+.regform input:required:invalid{
+    border-color: salmon !important;
+}

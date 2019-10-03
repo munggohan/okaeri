@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php
-        echo $userID;
+        // echo $userID;
     ?>
     <!--POPUP LOGIN-->
     <div id="whole_container" class="popup">

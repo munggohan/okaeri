@@ -66,19 +66,20 @@
             <div class="container bg-light">
 <!--*******************FORM REGISTER*************************-->
                 <h4 class="text-center">Register to OKAERI!</h4>
-                <form action="" name="regForm" class="regform" method="post">
-                    <input id = "i_fname" name="fname" class="form-control mr-sm-2 my-2 i_fname" type="text" placeholder="First Name" minlength = "3" required>
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Middle Name">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Last Name">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Age">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Contact Number">
-                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Address">
-                    <input class="form-control mr-sm-2 my-2" type="email" placeholder="Email Adress" required>
-                    <input class="form-control mr-sm-2 my-2" type="email" placeholder="Verify Email Adress" required>
-                    <input class="form-control mr-sm-2 my-2" type="password" placeholder="Password">
+                <form action="regFunction.php" class="regform" method="post">
+                    <label id="l_fname" class="l_fname" for="fname"></label>
+                    <input id = "i_fname" class="form-control mr-sm-2 my-2 i_fname" type="text" placeholder="First Name" name="fname" minlength = "3" required>
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Middle Name" name="mname" required>
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Last Name" name="lname" required>
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Age" name="age" required>
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Contact Number" name="contact" minlength="11" required>
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Address" name="address" required>
+                    <input class="form-control mr-sm-2 my-2" type="email" placeholder="Email Adress" name="email" required>
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Verify Email Adress" required>
+                    <input class="form-control mr-sm-2 my-2" type="text" placeholder="Username" name="username" required>
+                    <input class="form-control mr-sm-2 my-2" type="password" placeholder="Password" name="password" required>
                     <input class="form-control mr-sm-2 my-2" type="password" placeholder="Verify Password">
-                    
-                    <button name="submit" type="submit" value="Submit" class="btn btn-outline-warning w-100 my-2 my-sm-0 text-dark">Sign up!</button>
+                    <button onClick="validation()" class="btn btn-outline-warning w-100 my-2 my-sm-0 text-dark" type="submit">Sign up!</button>
                 </form>
             </div>
         </div>

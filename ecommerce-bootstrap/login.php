@@ -3,6 +3,7 @@
     //connect to database
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $notice = "Username or Password is Incorrect";
     $conn = mysqli_connect('localhost','root','','okaeridb');
     //write query
     if(!$conn){
@@ -19,6 +20,8 @@
         echo session_id();
         // header("refresh:5;url=index.php");
         header("location:userIndex.php");
+    }
+    else{
     }
     
 ?>

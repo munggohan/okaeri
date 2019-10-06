@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +12,6 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <?php
-        // echo $userID;
-    ?>
     <!--POPUP LOGIN-->
     <div id="whole_container" class="popup">
         <div class="container inside text-center">
@@ -22,7 +20,7 @@
                 x
             </div>
            <h4 class="">Log In</h4>
-           <p class="note d-block m-auto"><?php echo "Put username incorrect or correct"?></p>
+           <p class="note d-block m-auto"><br></p>
            <input class="form-control mr-sm-2 my-2" type="text" placeholder="Username" name="username">
            <input class="form-control mr-sm-2 my-2" type="password" placeholder="Password" name="password">
            <button class="btn my-2 my-sm-0" type="submit">Log-in</button>

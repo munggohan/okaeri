@@ -68,3 +68,11 @@ div.container.bg-light{
 .regform input:required:invalid{
     border-color: salmon !important;
 }
+.regform input:required:focus:valid {
+    background: url("../image/icons8-checkmark.svg") no-repeat 95% 50%;
+    background-size: 25px;
+  }
+  .regform input:focus:invalid {
+    background: url("../image/icons8-multiply-48.png") no-repeat 95% 50%;
+    background-size: 25px;
+  }

@@ -20,6 +20,7 @@
                 x
             </div>
            <h4 class="">Log In</h4>
+           <hr class="w-100">
            <p class="note d-block m-auto"><br></p>
            <input class="form-control mr-sm-2 my-2" type="text" placeholder="Username" name="username">
            <input class="form-control mr-sm-2 my-2" type="password" placeholder="Password" name="password">
@@ -100,7 +101,13 @@
             <div class="jumbotron bg-transparent col-xl-9">
                 <h4 class="">New Manga Volume Release</h4>
                 <hr class="my-4">
-                <p>Content</p>
+                <div class="card text-center w-25">
+                  <img class="card-img-top" src="holder.js/100px180/" alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Body</p>
+                  </div>
+                </div>
             </div>
             <div class="jumbotron bg-pink col-xl-3">
                 <h4 class="">Trending Manga</h4>
@@ -143,31 +150,24 @@
             </div>
     </section>
     <!--END OF POPULAR SECTION-->
-    <footer class="">
-        <div class="row">
-            <img src="image/OKAERI.png" class="d-block m-auto py-2" alt="okaeri-logo">
-        </div>
+    <footer class="text-light">
         <div class="container">
             <div class="row">
-                <div class="jumbotron bg-transparent col-xl-4">
-                    <h5 class="">FAQS</h5>
+                <div class="jumbotron bg-transparent col-xl-6">
+                    <h5 class="text-center">FAQS</h5>
                     <ul>
                         <li><a href=""><i class="fa fa-question-circle"></i> About US</a></li>
                         <li><a href=""><i class="fa fa-truck"></i> Delivery or Shipping</a></li>
+                        <li><a href=""><i class="fa fa-phone"></i> Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="jumbotron bg-transparent col-xl-4">
-                    <h5 class="">In partners with:</h5>
-                    <a href=""><img src="image/shueisha.png" class="d-block m-auto w-50" alt="shueisha-logo"></a>
-                    <a href=""><img src="image/logo--kodansha_comics.svg" class="d-block m-auto w-50" alt="kodansha-logo"></a>
-                    <a href=""><img src="image/1774-VIZMedia_ImprintSocialShare_NEW_600x314.png" class="d-block m-auto w-50" alt="viz-logo"></a>
-                </div>
-                <div class="jumbotron bg-transparent col-xl-4">
-                    <h5 class="">FAQS</h5>
-                    <ul>
-                        <li><a href=""><i class="fa fa-question-circle"></i> About US</a></li>
-                        <li><a href=""><i class="fa fa-truck"></i> Delivery or Shipping</a></li>
-                    </ul>
+                <div class="jumbotron bg-transparent col-xl-6">
+                    <h5 class="text-center">In partners with:</h5>
+                    <div class="d-flex">
+                        <a href=""><img src="image/shueisha.png" class="d-block m-auto w-50" alt="shueisha-logo"></a>
+                        <a href=""><img src="image/logo--kodansha_comics.svg" class="d-block m-auto w-50" alt="kodansha-logo"></a>
+                        <a href=""><img src="image/1774-VIZMedia_ImprintSocialShare_NEW_600x314.png" class="d-block m-auto w-50" alt="viz-logo"></a>
+                    </div>
                 </div>
             </div>
         </div>

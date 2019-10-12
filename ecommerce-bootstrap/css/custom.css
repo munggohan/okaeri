@@ -18,8 +18,8 @@ div.jumbotron.bg-pink{
     background: rgb(255, 220, 225);
 }
 footer{
-    border-top: 1.5px solid rgb(133, 126, 126);
-    background-color: rgb(133, 126, 126);
+    border-top: 1.5px solid rgb(47, 47, 47);
+    background-color: rgb(29, 29, 29);
 }
 ul li{
     list-style-type: none;
@@ -34,6 +34,13 @@ ul li{
     width: 100%;
     background: transparent;
     z-index: 1;
+}
+.login-c{
+    background: pink;
+    padding: 5%;
+}
+.close{
+    cursor: pointer;
 }
 div.container.inside{
     background: white;

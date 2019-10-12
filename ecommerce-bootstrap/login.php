@@ -29,8 +29,10 @@
     $sql = "SELECT * FROM accountstbl WHERE userName='$username' && userPassword='$password'";
     $result = mysqli_query($conn,$sql);
     $row = mysqli_fetch_array($result);
-    if(($row['userName']=="" && $row['userPassword']=="")){
+    if(($username=="" && $password=="")){
         echo"Enter Username and Password";
+        header("refresh:2;url=index.php");
+        session_destroy();
     }
     else if($row['userName']==$username && $row['userPassword']==$password){
         $_SESSION['userID'] = $row['userID'];
@@ -42,8 +44,9 @@
         header("location:userIndex.php");
     }
     else{
-        echo"wrong pass";
-        header("location:index.php");
+        echo"Username or Password Incorrect";
+        header("refresh:2;url=index.php");
+        session_destroy();
     }
     
 ?>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/fontawesome-free-5.10.1-web/css/all.css">
     <title>Cart</title>
@@ -49,7 +50,14 @@
             <div class="row">
                 <div class="col-xl-8">
                     <div class="jumbotron bg-transparent">
-                        <h4>Your Cart ()</h4>
+                        <div class="row">
+                            <div class="col-xl-10 pl-0">
+                                <h3>Your Cart()</h3>
+                            </div>
+                            <div class="col-xl-2">
+                                <button class="btn btn-warning text-white" type="button" value="">CLEAR</button>
+                            </div>
+                        </div>
                         <hr class="my-4 text-dark">
                         <div class="row">
                             <div class="col-xl-3 border p-2">
@@ -58,10 +66,10 @@
                             <div class="col-xl-9">
                                 <div class="p-name">
                                     <div class="row">
-                                        <div class="col-8">
+                                        <div class="col-9">
                                             <h6>Product Name:</h6> 
                                         </div>
-                                        <div class="col-4">
+                                        <div class="col-3">
                                             <button class="btn btn-danger"><h6>Remove</h6></button>
                                         </div>
                                     </div>
@@ -125,31 +133,27 @@
         </div>
     </section>
 
-    <footer class="bg-dark">
+    <footer class="text-light bg-dark">
         <div class="text-center">
-            <img src="image/OKAERI.png" class="d-block m-auto py-2" alt="okaeri-logo">
+             <img src="image/OKAERI.png" class="d-block m-auto py-2" alt="okaeri-logo">
         </div>
         <div class="container">
             <div class="row">
-                <div class="jumbotron bg-transparent col-xl-4">
-                    <h5 class="">FAQS</h5>
+                <div class="jumbotron bg-transparent col-xl-6">
+                    <h5 class="text-center">FAQS</h5>
                     <ul>
                         <li><a href=""><i class="fa fa-question-circle"></i> About US</a></li>
                         <li><a href=""><i class="fa fa-truck"></i> Delivery or Shipping</a></li>
+                        <li><a href=""><i class="fa fa-phone"></i> Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="jumbotron bg-transparent col-xl-4">
-                    <h5 class="">In partners with:</h5>
-                    <a href=""><img src="image/shueisha.png" class="d-block m-auto w-50" alt="shueisha-logo"></a>
-                    <a href=""><img src="image/logo--kodansha_comics.svg" class="d-block m-auto w-50" alt="kodansha-logo"></a>
-                    <a href=""><img src="image/1774-VIZMedia_ImprintSocialShare_NEW_600x314.png" class="d-block m-auto w-50" alt="viz-logo"></a>
-                </div>
-                <div class="jumbotron bg-transparent col-xl-4">
-                    <h5 class="">FAQS</h5>
-                    <ul>
-                        <li><a href=""><i class="fa fa-question-circle"></i> About US</a></li>
-                        <li><a href=""><i class="fa fa-truck"></i> Delivery or Shipping</a></li>
-                    </ul>
+                <div class="jumbotron bg-transparent col-xl-6">
+                    <h5 class="text-center">In partners with:</h5>
+                    <div class="d-flex">
+                        <a href=""><img src="image/shueisha.png" class="d-block m-auto w-50" alt="shueisha-logo"></a>
+                        <a href=""><img src="image/logo--kodansha_comics.svg" class="d-block m-auto w-50" alt="kodansha-logo"></a>
+                        <a href=""><img src="image/1774-VIZMedia_ImprintSocialShare_NEW_600x314.png" class="d-block m-auto w-50" alt="viz-logo"></a>
+                    </div>
                 </div>
             </div>
         </div>

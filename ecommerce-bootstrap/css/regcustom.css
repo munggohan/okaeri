@@ -53,11 +53,13 @@ a.dropdown-item.s_out{
     background: #0009;
 }
 div.container.bg-light{
-    top: 20%;
+    border-radius: 10px;
+    top: 13%;
     position: absolute;
     width: 40%;
     left: 30%;
     padding: 2%;
+    
 }
 .regform input:focus{
     outline: none;

@@ -58,7 +58,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="account.php">Welcome! <?php echo $userName ?></a>
                             <a class="dropdown-item" href="#">Orders</a>
-                            <a class="dropdown-item" href="signout.php">Sign-out</a>
+                            <a class="dropdown-item" href="signout.php  ">Sign-out</a>
                         </div>
                     </li>
                 </ul>

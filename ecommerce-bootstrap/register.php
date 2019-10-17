@@ -76,6 +76,11 @@
                     <input class="form-control mr-sm-2 my-2 email" type="email" id="email" placeholder="Email Adress" name="email">              
                     <input class="form-control mr-sm-2 my-2" type="text" placeholder="Username" name="username" required>
                     <input class="form-control mr-sm-2 my-2" type="password" id="password" placeholder="Password" name="password" required>
+                    <hr>
+                    <p class="text-center">
+                        By clicking the Sign Up! button, you agree to our Terms and Conditions and Privacy Policy.
+                    </p>
+                    <hr>
                     <button class="btn btn-outline-warning w-100 my-2 my-sm-0 text-dark" type="submit">Sign up!</button>
                 </form>
             </div>

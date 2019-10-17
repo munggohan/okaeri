@@ -95,19 +95,21 @@
         </section>
         <!--END OF BANNER-->
     </header>
-    <!--MANGA SECTION-->
+    <!--POPULAR AND TRENDING SECTION-->
     <section id="manga-list" class="container">
         <div class="row">
             <div class="jumbotron bg-transparent col-xl-9">
-                <h4 class="">New Manga Volume Release</h4>
+                <h4 class="">New Popular Series</h4>
                 <hr class="my-4">
+                <!--CONTENT CARD -->
                 <div class="card text-center w-25">
-                  <img class="card-img-top" src="holder.js/100px180/" alt="">
-                  <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Body</p>
-                  </div>
+                    <img class="card-img-top" src="holder.js/100px180/" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Title</h4>
+                        <p class="card-text">Body</p>
+                    </div>
                 </div>
+                <!-- END OF CONTENT CARD -->            
             </div>
             <div class="jumbotron bg-pink col-xl-3">
                 <h4 class="">Trending Manga</h4>
@@ -127,29 +129,45 @@
             </div>
         </div>
     </section>
-    <!--END OF MANGA SECTION-->
-    <!--LIGHT NOVEL SECTION-->
+    <!--END OF POPULAR AND TRENDING SECTION-->
+    <!--MANGA SECTION-->
     <section class="container" id="light-novels-list">
             <div class="row">
                 <div class="jumbotron bg-transparent col-xl-12">
-                    <h4 class="">New Light Novel Volume Release</h4>
+                    <h4 class="">New Manga Volume Release</h4>
                     <hr class="my-4">
-                    <p>Content</p>
+                    <!-- CONTENT CARD -->
+                    <div class="card text-center w-25">
+                        <img class="card-img-top" src="holder.js/100px180/" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Body</p>
+                        </div>
+                    </div>
+                    <!-- END OF CONTENT CARD -->
                 </div>
             </div>
     </section>
-    <!--END OG LN SECTION-->
-    <!--POPULAR SECTION-->
+    <!--END OF MANGA SECTION-->
+    <!--LN SECTION-->
     <section class="container" id="popular-series">
             <div class="row">
                 <div class="jumbotron bg-transparent col-xl-12">
                     <h4 class="">Popular Series</h4>
                     <hr class="my-4">
-                    <p>Content</p>
+                    <!-- CONTENT CARD -->
+                    <div class="card text-center w-25">
+                        <img class="card-img-top" src="holder.js/100px180/" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Title</h4>
+                            <p class="card-text">Body</p>
+                        </div>
+                    </div>
+                    <!-- END OF CONTENT CARD -->
                 </div>
             </div>
     </section>
-    <!--END OF POPULAR SECTION-->
+    <!--END OF LN SECTION-->
     <footer class="text-light">
         <div class="container">
             <div class="row">

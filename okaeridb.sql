@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2019 at 07:14 AM
+-- Generation Time: Oct 19, 2019 at 09:19 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -74,6 +74,33 @@ INSERT INTO `accountstbl` (`userID`, `userName`, `userPassword`, `type`) VALUES
 (3, 'maangelica', 'hanirokyu', 'customer'),
 (4, 'beemobi', 'Arevalo08', 'customer'),
 (6, 'carlo_angeles', 'Asdfjklh1', 'customer');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `okaeriitems`
+--
+
+CREATE TABLE `okaeriitems` (
+  `productCode` int(255) NOT NULL,
+  `productName` varchar(1024) NOT NULL,
+  `productAuthor` varchar(1024) NOT NULL,
+  `productPublisher` varchar(1024) NOT NULL,
+  `productType` varchar(1024) NOT NULL,
+  `productLanguage` varchar(1024) NOT NULL,
+  `productDateReceived` date NOT NULL,
+  `productGenre` varchar(1024) NOT NULL,
+  `productImage` varchar(1024) NOT NULL,
+  `productStock` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `okaeriitems`
+--
+
+INSERT INTO `okaeriitems` (`productCode`, `productName`, `productAuthor`, `productPublisher`, `productType`, `productLanguage`, `productDateReceived`, `productGenre`, `productImage`, `productStock`) VALUES
+(1, 'one piece', 'eichirou oda', 'shueisha', 'Manga', 'Japanese', '2019-10-19', 'Action, Adventure', 'none', 0),
+(2, 'Fairy Tail', 'Hiro Mashima', 'Shueisha', 'Manga', 'English', '2019-08-09', 'Fantasy, Action, Adventure', 'N.a', 0);
 
 --
 -- Indexes for dumped tables

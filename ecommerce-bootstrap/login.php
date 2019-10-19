@@ -19,6 +19,7 @@
     //connect to database
     $username = $_POST['username'];
     $password = $_POST['password'];
+    $type     = $_POST['type'];
     $notice = "Username or Password is Incorrect";
     $conn = mysqli_connect('localhost','root','','okaeridb');
     
@@ -34,7 +35,7 @@
         header("refresh:2;url=index.php");
         session_destroy();
     }
-    else if($row['userName']==$username && $row['userPassword']==$password){
+    else if($row['userName']==$username && $row['userPassword']==$password && $row['type']=="customer"){
         $_SESSION['userID'] = $row['userID'];
         $_SESSION['userName'] = $row['userName'];
         $_SESSION['userPassword'] = $row['userPassword'];
@@ -42,6 +43,15 @@
         echo session_id();
         // header("refresh:5;url=index.php");
         header("location:userIndex.php");
+    }
+    else if($row['userName']==$username && $row['userPassword']==$password && $row['type']=="admin"){
+        $_SESSION['userID'] = $row['userID'];
+        $_SESSION['userName'] = $row['userName'];
+        $_SESSION['userPassword'] = $row['userPassword'];
+        echo $row['userID']; 
+        echo session_id();
+        // header("refresh:5;url=index.php");
+        header("location:admin.php");
     }
     else{
         echo"Username or Password Incorrect";

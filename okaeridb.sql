@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2019 at 11:46 AM
+-- Generation Time: Oct 19, 2019 at 04:20 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -34,9 +34,20 @@ CREATE TABLE `accountdetailstbl` (
   `userMname` varchar(1080) NOT NULL,
   `userLname` varchar(1080) NOT NULL,
   `userAddress` varchar(1080) NOT NULL,
+  `userContact` int(15) NOT NULL,
+  `userAge` int(2) NOT NULL,
   `userCreditCardNo` int(255) DEFAULT NULL,
   `userDebitCardNo` int(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `accountdetailstbl`
+--
+
+INSERT INTO `accountdetailstbl` (`userID`, `userFname`, `userMname`, `userLname`, `userAddress`, `userContact`, `userAge`, `userCreditCardNo`, `userDebitCardNo`) VALUES
+(2, 'ethan', 'acopio', 'arevalo', 'regina ville ', 2147483647, 23, NULL, NULL),
+(3, 'ma angelica', 'acopio', 'arevalo', 'regina ville 2000', 2147483647, 23, NULL, NULL),
+(3, 'ma angelica', 'acopio', 'arevalo', 'regina ville 2000', 2147483647, 23, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -46,7 +57,7 @@ CREATE TABLE `accountdetailstbl` (
 
 CREATE TABLE `accountstbl` (
   `userID` int(11) NOT NULL,
-  `userName` varchar(1080) NOT NULL,
+  `userName` varchar(767) NOT NULL,
   `userPassword` varchar(1080) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -55,7 +66,9 @@ CREATE TABLE `accountstbl` (
 --
 
 INSERT INTO `accountstbl` (`userID`, `userName`, `userPassword`) VALUES
-(1, 'carlo', 'abc123');
+(1, 'carlo', 'abc123'),
+(2, 'ethanlec', '123'),
+(3, 'maangelica', 'hanirokyu');
 
 --
 -- Indexes for dumped tables
@@ -65,7 +78,8 @@ INSERT INTO `accountstbl` (`userID`, `userName`, `userPassword`) VALUES
 -- Indexes for table `accountstbl`
 --
 ALTER TABLE `accountstbl`
-  ADD PRIMARY KEY (`userID`);
+  ADD PRIMARY KEY (`userID`),
+  ADD UNIQUE KEY `userID` (`userID`,`userName`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -75,7 +89,7 @@ ALTER TABLE `accountstbl`
 -- AUTO_INCREMENT for table `accountstbl`
 --
 ALTER TABLE `accountstbl`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

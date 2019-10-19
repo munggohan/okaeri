@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2019 at 06:21 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Generation Time: Oct 19, 2019 at 07:14 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -33,10 +33,10 @@ CREATE TABLE `accountdetailstbl` (
   `userFname` varchar(1080) NOT NULL,
   `userMname` varchar(1080) NOT NULL,
   `userLname` varchar(1080) NOT NULL,
+  `userBirthday` date NOT NULL,
   `userAddress` varchar(1080) NOT NULL,
-  `userContact` int(15) NOT NULL,
+  `userContact` varchar(15) NOT NULL,
   `userAge` int(2) NOT NULL,
-  `userCreditCardNo` int(255) DEFAULT NULL,
   `userDebitCardNo` int(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -44,10 +44,12 @@ CREATE TABLE `accountdetailstbl` (
 -- Dumping data for table `accountdetailstbl`
 --
 
-INSERT INTO `accountdetailstbl` (`userID`, `userFname`, `userMname`, `userLname`, `userAddress`, `userContact`, `userAge`, `userCreditCardNo`, `userDebitCardNo`) VALUES
-(2, 'ethan', 'acopio', 'arevalo', 'regina ville ', 2147483647, 23, NULL, NULL),
-(3, 'ma angelica', 'acopio', 'arevalo', 'regina ville 2000', 2147483647, 23, NULL, NULL),
-(3, 'ma angelica', 'acopio', 'arevalo', 'regina ville 2000', 2147483647, 23, NULL, NULL);
+INSERT INTO `accountdetailstbl` (`userID`, `userFname`, `userMname`, `userLname`, `userBirthday`, `userAddress`, `userContact`, `userAge`, `userDebitCardNo`) VALUES
+(2, 'ethan', 'acopio', 'arevalo', '0000-00-00', 'regina ville ', '2147483647', 23, NULL),
+(3, 'ma angelica', 'acopio', 'arevalo', '0000-00-00', 'regina ville 2000', '2147483647', 23, NULL),
+(3, 'ma angelica', 'acopio', 'arevalo', '0000-00-00', 'regina ville 2000', '2147483647', 23, NULL),
+(4, 'ethan rei', 'a', 'arevalo', '1996-08-09', 'trece martires city', '2147483647', 0, NULL),
+(6, 'Carlo', 'H', 'Angeles', '1996-11-01', 'Alfonso, Cavite', '09667065051', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -69,7 +71,9 @@ CREATE TABLE `accountstbl` (
 INSERT INTO `accountstbl` (`userID`, `userName`, `userPassword`, `type`) VALUES
 (1, 'carlo', 'abc123', 'admin'),
 (2, 'ethanlec', '123', 'customer'),
-(3, 'maangelica', 'hanirokyu', 'customer');
+(3, 'maangelica', 'hanirokyu', 'customer'),
+(4, 'beemobi', 'Arevalo08', 'customer'),
+(6, 'carlo_angeles', 'Asdfjklh1', 'customer');
 
 --
 -- Indexes for dumped tables
@@ -90,7 +94,7 @@ ALTER TABLE `accountstbl`
 -- AUTO_INCREMENT for table `accountstbl`
 --
 ALTER TABLE `accountstbl`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

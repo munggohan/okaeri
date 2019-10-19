@@ -5,16 +5,17 @@ $fname = $_POST['fname'];
 $mname  = $_POST['mname'];
 $lname = $_POST['lname'];
 $address = $_POST['address'];
-$age = $_POST['age'];
+// $age = $_POST['age'];
 $contact = $_POST['contact'];
 $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
+$birthday = $_POST['birthday'];
 $userID;
 echo $fname;
 echo $username;
-if(!mysqli_query($conn,"SELECT * FROM `accountstbl` WHERE userName = '$username'")){
-    if(mysqli_query($conn,"INSERT INTO `accountstbl` VALUES (null, '$username', '$password')")===true){
+if(mysqli_query($conn,"SELECT * FROM `accountstbl` WHERE userName = '$username'")){
+    if(mysqli_query($conn,"INSERT INTO `accountstbl` VALUES (null, '$username', '$password', 'customer')")){
         echo "success 1";
         if ($result2 = mysqli_query($conn,"SELECT * from `accountstbl` where userName = '$username' && 
         userPassword = '$password'")){
@@ -29,10 +30,10 @@ if(!mysqli_query($conn,"SELECT * FROM `accountstbl` WHERE userName = '$username'
             }else{
                 echo "error 3";
             }
-            $detailsSql = "INSERT INTO accountdetailstbl (userID, userFname, userMname, userLname, userAddress, userContact, userAge)
-            VALUES ($userID, $fname, $mname, $lname, $address, $contact, $age)";
-            if (mysqli_query($conn,"INSERT INTO `accountdetailstbl` (userID, userFname, userMname, userLname, userAddress, userContact, userAge)
-            VALUES ('$userID', '$fname', '$mname', '$lname', '$address', '$contact', '$age')")){
+            // $detailsSql = "INSERT INTO accountdetailstbl (userID, userFname, userMname, userLname, userBirthday, userAddress, userContact, userAge)
+            // VALUES ($userID, $fname, $mname, $lname, $birthday, $address, $contact, $age)";
+            if (mysqli_query($conn,"INSERT INTO `accountdetailstbl` (userID, userFname, userMname, userLname, userBirthday, userAddress, userContact)
+            VALUES ('$userID', '$fname', '$mname', '$lname', '$birthday', '$address', '$contact')")){
                 echo "success 4";
                 header("location:userIndex.php");
             }else{

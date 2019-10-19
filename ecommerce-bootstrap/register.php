@@ -73,9 +73,11 @@
                     <input class="form-control mr-sm-2 my-2" type="text" placeholder="Last Name" name="lname">
                     <input class="form-control mr-sm-2 my-2" type="text" placeholder="Contact Number" name="contact" minlength="11">
                     <input class="form-control mr-sm-2 my-2" type="text" placeholder="Address" name="address">
+                    <input class="form-control mr-sm-2 my-2" type="date" placeholder="Birthday" name="birthday">
                     <input class="form-control mr-sm-2 my-2 email" type="email" id="email" placeholder="Email Adress" name="email">              
                     <input class="form-control mr-sm-2 my-2" type="text" placeholder="Username" name="username" required>
-                    <input class="form-control mr-sm-2 my-2" type="password" id="password" placeholder="Password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}>
+                    <input class="form-control mr-sm-2 my-2" type="password" id="password" placeholder="Password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    
                     <hr>
                     <p class="text-center">
                         By clicking the Sign Up! button, you agree to our Terms and Conditions and Privacy Policy.

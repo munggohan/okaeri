@@ -180,13 +180,13 @@
                         $result = mysqli_query($conn,$sql);
                         if($result->num_rows >0){
                             while($row = $result->fetch_assoc()){
-                              echo '<tr><td><center>' .$row["productCode"]. '</center></td>';
-                              echo '<td><center>' .$row["productName"]. '</center></td>';
-                              echo '<td><center>' .$row["productAuthor"]. '</div></center></td>';
-                              echo '<td><center>' .$row["productPublisher"]. '</div> </center></td>';
-                              echo '<td><center>' .$row["productLanguage"]. '</center></td>';
-                              echo '<td><center>' .$row["productType"]. '</div> </center></td>';
-                              echo '<td><center>' .$row["productDateReceived"]. '</center></td><tr>';
+                              echo '<tr><td><center>' .$row["productCode"]. '</center></td>
+                                <td><center>' .$row["productName"]. '</center></td>
+                                <td><center>' .$row["productAuthor"]. '</div></center></td>
+                                <td><center>' .$row["productPublisher"]. '</div> </center></td>
+                                <td><center>' .$row["productLanguage"]. '</center></td>
+                                <td><center>' .$row["productType"]. '</div> </center></td>
+                                <td><center>' .$row["productDateReceived"]. '</center></td><tr>';
                             }}
                     ?>
                 </tbody>

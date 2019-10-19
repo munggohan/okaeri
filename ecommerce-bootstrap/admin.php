@@ -28,21 +28,10 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="manga.php">Manga <span class="sr-only">(current)</span></a>
+                        <span class="nav-link" href="manga.php">Welcome, Admin <?php echo $userName?> <span class="sr-only">(current)</span></span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Light Novels</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.php"><i class="fa fa-shopping-cart"></i></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Orders</a>
-                            <a class="dropdown-item" href="#" onClick="logpop()">Log-in</a>
-                            <a class="dropdown-item" href="register.php">Sign-up</a>
-                        </div>
+                        <a class="nav-link" href="signout.php">Log out</a>
                     </li>
                 </ul>
             </div>

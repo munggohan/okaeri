@@ -3,7 +3,9 @@
 $conn = mysqli_connect('localhost','root','','okaeridb');
 session_start();
 $userid = $_SESSION['userID'];
-echo $userid;
+$username = $_SESSION['userName'];
+$userpassword = $_SESSION['userPassword'];
+// echo $userid;
 $sql = "SELECT * FROM accountdetailstbl WHERE userID = '$userid'";
 $result = mysqli_query($conn,$sql);
 if (!$result) {
@@ -17,11 +19,12 @@ if($row['userID']==$userid){
     $userFname = $row['userFname'];
     $userMname = $row['userMname'];
     $userLname = $row['userLname'];
+    $userBirthday = $row['userBirthday'];
     $userAddress = $row['userAddress'];
     $userContact = $row['userContact'];
     $userAge = $row['userAge'];
+
     echo '<html>
-        // <h1>'.$userFname.'</h1>
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,6 +70,47 @@ if($row['userID']==$userid){
                 </div>
             </nav>
         <!--END OF NAVIGATION-->
+        <!--DETAILS-->
+            <section class="container" id="userAccount">
+                <div class="row">
+                    <div class="jumbotron bg-transparent col-xl-12">
+                        <h4 class="">Welcome! '.$username.'</h4>
+                        <hr class="my-4">
+                        <p>Name: '.$userFname.' '.$userMname.' '.$userLname.'</p>
+                        <p>Birthday: '.$userBirthday.'</p>
+                        <p>Address: '.$userAddress.'</p>
+                        <p>Contact: '.$userContact.'</p>
+                        <p>Age: '.$userAge.'</p>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Password:</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder='.$userpassword.' aria-label="Debit Card" aria-describedby="basic-addon1" minlength = "4" maxlength = "4" required pattern="[0-9]{4,4}">
+                            <button class="btn btn-outline-secondary" type="button">Edit</button>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Debit Card:</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="NO DATA" aria-label="Debit Card" aria-describedby="basic-addon1" minlength = "4" maxlength = "4" required pattern="[0-9]{4,4}">
+                            <button class="btn btn-outline-secondary" type="button">Edit</button>
+                        </div>
+                        <!--<div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">Valid Thru:</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Valid Thru" aria-label="Debit Card" aria-describedby="basic-addon1">
+                        
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">CVV2:</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="CVV2" aria-label="Debit Card" aria-describedby="basic-addon1">
+                        </div>-->
+
+                    </div>
+                </div>
+            </section>
         </body>
         </html>';
 }

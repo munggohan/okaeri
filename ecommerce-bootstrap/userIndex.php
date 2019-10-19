@@ -56,7 +56,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i></a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="account.php">Welcome! <?php echo $userName ?></a>
+                            <a class="dropdown-item" href="account.php">Welcome! <?php echo $userName   ?></a>
                             <a class="dropdown-item" href="#">Orders</a>
                             <a class="dropdown-item" href="signout.php  ">Sign-out</a>
                         </div>

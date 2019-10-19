@@ -56,7 +56,7 @@
                 <div class="jumbotron bg-transparent w-100">
                     <h1>Add New Item</h1>
                     <hr class="my-4">
-                    <form action="">
+                    <form action="upload.php" enctype="multipart/form-data" method="post">
                         <div class="row">
                             <div class="input-group mb-3 col-xl-3">
                                 <div class="input-group-prepend">
@@ -158,6 +158,11 @@
                                     </div>
                                 </div>
                             </div>                           
+                        </div>
+                        <div class="row">
+                            <label for="">Upload front cover photo:</label>
+                            <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
+                            <button type="submit" class="btn btn-outline-success">Add Item</button>
                         </div>
                     </form>
                 </div>

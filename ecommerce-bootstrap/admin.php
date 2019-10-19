@@ -169,6 +169,28 @@
             </div>
         </div>
     </section>
+    <section id="table">
+        <div class="container">
+            <table class="table table-dark text-center">
+                <thead>
+                    <tr>
+                        <th>Product Code</th>
+                        <th>Product Name</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Language</th>
+                        <th>Type</th>
+                        <th>Date Recieved</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
         <!--SCRIPT-->
         <script src="js/main.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

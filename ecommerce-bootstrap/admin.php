@@ -51,25 +51,25 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="my-addon">Product Code</span>
                                 </div>
-                                <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
+                                <input class="form-control" type="text" name="productCode" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
                             </div>
                             <div class="input-group mb-3 col-xl-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="my-addon">Product Name</span>
                                 </div>
-                                <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
+                                <input class="form-control" type="text" name="productName" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
                             </div>
                             <div class="input-group mb-3 col-xl-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="my-addon">Author</span>
                                 </div>
-                                <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
+                                <input class="form-control" type="text" name="productAuthor" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
                             </div>
                             <div class="input-group mb-3 col-xl-3">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="my-addon">Publisher</span>
                                 </div>
-                                <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
+                                <input class="form-control" type="text" name="productPublisher" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
                             </div>
                         </div>
 
@@ -78,7 +78,7 @@
                                 <div class="input-group-prepend">
                                   <label class="input-group-text" for="inputGroupSelect01">Type</label>
                                 </div>
-                                <select class="custom-select" id="inputGroupSelect01">
+                                <select class="custom-select" id="inputGroupSelect01" name="productType">
                                   <option selected>Manga</option>
                                   <option value="1">Light Novel</option>
                                 </select>
@@ -87,7 +87,7 @@
                                 <div class="input-group-prepend">
                                   <label class="input-group-text" for="inputGroupSelect01">Language</label>
                                 </div>
-                                <select class="custom-select" id="inputGroupSelect01">
+                                <select class="custom-select" id="inputGroupSelect01" name="productLanguage">
                                   <option selected>English</option>
                                   <option value="1">Japanese</option>
                                 </select>
@@ -96,7 +96,7 @@
                                 <div class="input-group-prepend">
                                   <label class="input-group-text" for="inputGroupSelect01">Date Recieved</label>
                                 </div>
-                                <input class="form-control" type="date">
+                                <input class="form-control" type="date" name="productDateReceived">
                             </div>
                         </div>
 
@@ -107,41 +107,41 @@
                                 <div class="row">
                                     <div class="genre-container col-xl-3">
                                         <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="Action">
+                                            <input type="checkbox" class="custom-control-input" name="genre[]" id="Action" value="Action">
                                             <label class="custom-control-label" for="Action">Action</label>
                                         </div>
                                         <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="Adventure">
+                                            <input type="checkbox" class="custom-control-input" name="genre[]" id="Adventure" value="Adventure">
                                             <label class="custom-control-label" for="Adventure">Adventure</label>
                                         </div>
                                     </div>
                                     <div class="genre-container col-xl-3">
                                         <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="Horror">
+                                            <input type="checkbox" class="custom-control-input" name="genre[]" id="Horror" value="Horror">
                                             <label class="custom-control-label" for="Horror">Horror</label>
                                         </div>
                                         <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="Thriller">
+                                            <input type="checkbox" class="custom-control-input" name="genre[]" id="Thriller" value="Thriller">
                                             <label class="custom-control-label" for="Thriller">Thriller</label>
                                         </div>
                                     </div>
                                     <div class="genre-container col-xl-3">
                                         <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="Mystery">
+                                            <input type="checkbox" class="custom-control-input" name="genre[]" id="Mystery" value="Mystery">
                                             <label class="custom-control-label" for="Mystery">Mystery</label>
                                         </div>
                                         <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="Yuri">
+                                            <input type="checkbox" class="custom-control-input" name="genre[]" id="Yuri" value="Yuri">
                                             <label class="custom-control-label" for="Yuri">Yuri</label>
                                         </div>
                                     </div>
                                     <div class="genre-container col-xl-3">
                                         <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="Yaoi">
+                                            <input type="checkbox" class="custom-control-input" name="genre[]" id="Yaoi" value="Yaoi">
                                             <label class="custom-control-label" for="Yaoi">Yaoi</label>
                                         </div>
                                         <div class="custom-control custom-checkbox mr-sm-2">
-                                            <input type="checkbox" class="custom-control-input" id="Fantasy">
+                                            <input type="checkbox" class="custom-control-input" name="genre[]" id="Fantasy" value="Fantasy">
                                             <label class="custom-control-label" for="Fantasy">Fantasy</label>
                                         </div>
                                     </div>
@@ -151,7 +151,8 @@
                         <div class="row">
                             <label for="">Upload front cover photo:</label>
                             <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
-                            <button type="submit" class="btn btn-outline-success">Add Item</button>
+                            <!-- <input type="submit" value="Upload Image" name="submit"> -->
+                            <button type="submit" class="btn btn-outline-success" name="submit">Add Item</button>
                         </div>
                     </form>
                 </div>

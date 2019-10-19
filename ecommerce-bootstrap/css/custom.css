@@ -69,3 +69,7 @@ div.container.inside button.btn.my-2.my-sm-0:hover{
 .btn-hover:focus, .btn-hover:active {
     color: green;
 }
+table{
+    border: none;
+    border-radius: 10px;
+}

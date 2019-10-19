@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/admincustom.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
     <header>
@@ -158,9 +158,48 @@
             </div>
         </div>
     </section>
+    <!-- POPUP EDIT -->
+    <div id="whole_container" class="popup">
+        <div class="container inside text-center">
+        <form action="login.php" method="post"> 
+            <div class="close" onClick="logpop()">
+                x
+            </div>
+            <h4 class="">Edit Details</h4>
+            <hr class="w-100">
+            <p class="note d-block m-auto"><br></p>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="my-addon">Item Code:</span>
+                </div>
+                <input class="form-control" type="text" name="" disabled id="itemcode" aria-label="Recipient's " aria-describedby="my-addon">
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="my-addon">Product Code:</span>
+                </div>
+                <input class="form-control" type="text" name="" id="p_code" aria-label="Recipient's " aria-describedby="my-addon">
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="my-addon">Product Name:</span>
+                </div>
+                <input class="form-control" type="text" name="" id="p_name" aria-label="Recipient's " aria-describedby="my-addon">
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="my-addon">Author</span>
+                </div>
+                <input class="form-control" type="text" name="" id="author" aria-label="Recipient's " aria-describedby="my-addon">
+            </div>
+
+        </form>
+        </div>
+    </div>
+    <!-- POPUP END -->
     <section id="table">
         <div class="container">
-            <table class="table table-dark text-center">
+            <table class="table table-dark" id="mytable">
                 <thead>
                     <tr>
                         <th>Product Code</th>
@@ -170,6 +209,7 @@
                         <th>Language</th>
                         <th>Type</th>
                         <th>Date Recieved</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -180,19 +220,38 @@
                         $result = mysqli_query($conn,$sql);
                         if($result->num_rows >0){
                             while($row = $result->fetch_assoc()){
-                              echo '<tr><td><center>' .$row["productCode"]. '</center></td>';
-                              echo '<td><center>' .$row["productName"]. '</center></td>';
-                              echo '<td><center>' .$row["productAuthor"]. '</div></center></td>';
-                              echo '<td><center>' .$row["productPublisher"]. '</div> </center></td>';
-                              echo '<td><center>' .$row["productLanguage"]. '</center></td>';
-                              echo '<td><center>' .$row["productType"]. '</div> </center></td>';
-                              echo '<td><center>' .$row["productDateReceived"]. '</center></td><tr>';
+                                echo '<tr><td>' .$row["productCode"]. '</td>';
+                                echo '<td>' .$row["productName"]. '</td>';
+                                echo '<td>' .$row["productAuthor"]. '</div></td>';
+                                echo '<td>' .$row["productPublisher"]. '</div></td>';
+                                echo '<td>' .$row["productLanguage"]. '</td>';
+                                echo '<td>' .$row["productType"]. '</div></td>';
+                                echo '<td>' .$row["productDateReceived"]. '</td>';
+                                echo '<td><button class="btn btn-info" id="pop" onclick="logpop()"><i class="fa fa-edit"></i></button></td><tr>';
                             }}
                     ?>
                 </tbody>
             </table>
         </div>
     </section>
+    
+    <script>
+        var table = document.getElementById('mytable');
+                
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                         //rIndex = this.rowIndex;
+                         //alert(this.cells[1].innerHTML);
+                         
+                        document.getElementById('itemcode').value = this.cells[0].innerHTML;
+                        document.getElementById("p_name").value = this.cells[1].innerHTML;
+                        document.getElementById("author").value = this.cells[2].innerHTML;
+                    };
+                }
+        
+    </script>
         <!--SCRIPT-->
         <script src="js/main.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

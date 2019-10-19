@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 19, 2019 at 04:20 AM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.10
+-- Generation Time: Oct 19, 2019 at 06:21 AM
+-- Server version: 10.1.33-MariaDB
+-- PHP Version: 7.2.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -58,17 +58,18 @@ INSERT INTO `accountdetailstbl` (`userID`, `userFname`, `userMname`, `userLname`
 CREATE TABLE `accountstbl` (
   `userID` int(11) NOT NULL,
   `userName` varchar(767) NOT NULL,
-  `userPassword` varchar(1080) NOT NULL
+  `userPassword` varchar(1080) NOT NULL,
+  `type` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `accountstbl`
 --
 
-INSERT INTO `accountstbl` (`userID`, `userName`, `userPassword`) VALUES
-(1, 'carlo', 'abc123'),
-(2, 'ethanlec', '123'),
-(3, 'maangelica', 'hanirokyu');
+INSERT INTO `accountstbl` (`userID`, `userName`, `userPassword`, `type`) VALUES
+(1, 'carlo', 'abc123', 'admin'),
+(2, 'ethanlec', '123', 'customer'),
+(3, 'maangelica', 'hanirokyu', 'customer');
 
 --
 -- Indexes for dumped tables

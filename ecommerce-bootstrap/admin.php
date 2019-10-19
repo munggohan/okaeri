@@ -53,10 +53,35 @@
     <section id="additem">
         <div class="container mt-4">
             <div class="row">
-                <div class="jumbotron">
-                    <h1 class="display-4">Add New Item</h1>
+                <div class="jumbotron bg-transparent w-100">
+                    <h1>Add New Item</h1>
                     <hr class="my-4">
-                    <p>Content</p>
+                    <div class="row">
+                        <div class="input-group col-xl-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="my-addon">Product Code</span>
+                            </div>
+                            <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
+                        </div>
+                        <div class="input-group col-xl-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="my-addon">Product Name</span>
+                            </div>
+                            <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
+                        </div>
+                        <div class="input-group col-xl-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="my-addon">Author</span>
+                            </div>
+                            <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
+                        </div>
+                        <div class="input-group col-xl-6">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="my-addon">Publisher</span>
+                            </div>
+                            <input class="form-control" type="text" name="" placeholder="Recipient's text" aria-label="Recipient's " aria-describedby="my-addon">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

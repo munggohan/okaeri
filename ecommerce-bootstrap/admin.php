@@ -193,7 +193,18 @@
                 </div>
                 <input class="form-control" type="text" name="" id="author" aria-label="Recipient's " aria-describedby="my-addon">
             </div>
-
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="my-addon">Publisher:</span>
+                </div>
+                <input class="form-control" type="text" name="" id="publisher" aria-label="Recipient's " aria-describedby="my-addon">
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="my-addon">Language</span>
+                </div>
+                <input class="form-control" type="text" name="" id="language" aria-label="Recipient's " aria-describedby="my-addon">
+            </div>
         </form>
         </div>
     </div>
@@ -249,6 +260,8 @@
                         document.getElementById('itemcode').value = this.cells[0].innerHTML;
                         document.getElementById("p_name").value = this.cells[1].innerHTML;
                         document.getElementById("author").value = this.cells[2].innerHTML;
+                        document.getElementById("publisher").value = this.cells[3].innerHTML;
+                        document.getElementById("language").value = this.cells[4].innerHTML;
                     };
                 }
         
